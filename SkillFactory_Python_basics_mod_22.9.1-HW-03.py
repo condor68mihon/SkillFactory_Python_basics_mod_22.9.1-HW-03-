@@ -3,7 +3,7 @@ def binary_search(array, element, left, right):
         return False # значит элемент отсутствует
 
     middle = (right + left) // 2  # находим середину
-    if array[middle] < element and array[middle + 1] >= element: # если элемент в середине,
+    if array[middle - 1] < element and element <= array[middle]: # если элемент в середине,
         return middle # возвращаем этот индекс
     elif element < array[middle]: # если элемент меньше элемента в середине
         # рекурсивно ищем в левой половине
